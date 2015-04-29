@@ -1,0 +1,11 @@
+{
+  "name": "angular-multimedia",
+  "version": "0.1.0",
+  "main": "angular-multimedia.module.js",
+  "ignore": [
+  ],
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}
