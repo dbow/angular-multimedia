@@ -5,6 +5,8 @@
   "ignore": [
   ],
   "dependencies": {
+    "angular": "~1.4.0",
+    "lodash": "~3.7.0"
   },
   "devDependencies": {
   }

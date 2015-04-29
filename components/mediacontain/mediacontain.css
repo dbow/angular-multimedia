@@ -1,0 +1,44 @@
+/**
+ * Styles for media-contain-directive.
+ */
+
+
+/* Defaults to CSS "object-fit: contain;" where supported. */
+img.media-contain-directive,
+.media-contain-directive img,
+video.media-contain-directive,
+.media-contain-directive video {
+  position: absolute;
+  object-fit: contain;
+  -o-object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* If polyfill is necessary, fills width of screen and vertically centers */
+img.media-contain-directive.media-contain-directive-polyfill,
+.media-contain-directive.media-contain-directive-polyfill img,
+video.media-contain-directive.media-contain-directive-polyfill,
+.media-contain-directive.media-contain-directive-polyfill video {
+  height: auto;
+  width: 100%;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+
+/* If window wider than element, fills height of screen and horizontally centers */
+img.media-contain-directive.media-contain-directive-polyfill.media-contain-directive-y,
+.media-contain-directive.media-contain-directive-polyfill img.media-contain-directive-y,
+video.media-contain-directive.media-contain-directive-polyfill.media-contain-directive-y,
+.media-contain-directive.media-contain-directive-polyfill video.media-contain-directive-y {
+  height: 100%;
+  width: auto;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+}
+
