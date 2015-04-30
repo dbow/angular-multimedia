@@ -1,0 +1,47 @@
+/**
+ * Styles for media-cover-directive.
+ */
+
+
+/* Defaults to CSS "object-fit: cover;" where supported. */
+img.media-cover-directive,
+.media-cover-directive img,
+video.media-cover-directive,
+.media-cover-directive video {
+  position: absolute;
+  object-fit: cover;
+  -o-object-fit: cover;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+
+/* If polyfill is necessary, fills height of screen and horizontally centers */
+img.media-cover-directive.media-cover-directive-polyfill,
+.media-cover-directive.media-cover-directive-polyfill img,
+video.media-cover-directive.media-cover-directive-polyfill,
+.media-cover-directive.media-cover-directive-polyfill video {
+  height: 100%;
+  width: auto;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+}
+
+/* If window wider than element, fills width of screen and vertically centers */
+img.media-cover-directive.media-cover-directive-polyfill.media-cover-directive-x,
+.media-cover-directive.media-cover-directive-polyfill img.media-cover-directive-x,
+video.media-cover-directive.media-cover-directive-polyfill.media-cover-directive-x,
+.media-cover-directive.media-cover-directive-polyfill video.media-cover-directive-x {
+  height: auto;
+  width: 100%;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+
+
